@@ -2,3 +2,7 @@
 
 # yussan.github.io
 Portofolio of [Yusuf Akhsan](https;//twitter.com/xyussanx).
+
+## Credits
+* Pug and Sass boilerplate by : https://github.com/yussan/grunt-pug-sass-boilerplate/blob/master/README.md
+* Design by [yussan](https://twitter.com/xyussanx)

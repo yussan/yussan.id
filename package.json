@@ -1,12 +1,28 @@
 {
   "name": "yussan.github.io",
-  "version": "0.0.0",
+  "version": "0.1.0-beta.0",
   "description": "Yussan portofolio website",
   "main": "index.js",
   "repository": "git@github.com:yussan/yussan.github.io.git",
   "author": "yussan <yussandevelper@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "yarn dev:build",
+    "dev:build": "grunt",
+    "prod:build": "NODE_ENV=production grunt",
+    "release": "standard-version",
+    "release:beta": "standard-version -p beta"
+  },
   "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^2.2.1",
+    "grunt-contrib-imagemin": "^2.0.1",
+    "grunt-contrib-pug": "^1.0.0",
+    "grunt-contrib-uglify": "^3.1.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^2.0.0",
     "standard-version": "^4.2.0"
   }
 }
