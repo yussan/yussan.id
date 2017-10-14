@@ -6,13 +6,43 @@ body, html
 @import _const
 
 section.cover 
+    position: relative
     min-height: 100vh 
     background: $blue 
     color: $white
-    background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #22a2d2 75%)
-    background: -webkit-linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #22a2d2 75%)
-    background: -moz-linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #22a2d2 75%)
-    background: -ms-linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #22a2d2 75%)
+    // background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #22a2d2 75%)
+    // background: -webkit-linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #22a2d2 75%)
+    // background: -moz-linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #22a2d2 75%)
+    // background: -ms-linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #22a2d2 75%)
+    background: linear-gradient(328deg, #23b9db, #1d5aab, #0d0551, #093671)
+    background-size: 800% 800%
+
+    -webkit-animation: AnimationName 16s ease infinite
+    -moz-animation: AnimationName 16s ease infinite
+    animation: AnimationName 16s ease infinite
+
+    @-webkit-keyframes AnimationName
+        0%
+            background-position: 2% 0%
+        50%
+            background-position: 99% 100%
+        100%
+            background-position: 2% 0%
+    @-moz-keyframes AnimationName
+        0%
+            background-position: 2% 0%
+        50%
+            background-position: 99% 100%
+        100%
+            background-position: 2% 0%
+    @keyframes AnimationName 
+        0%
+            background-position: 2% 0%
+        50%
+            background-position: 99% 100%
+        100%
+            background-position: 2% 0%
+
     text-align: center 
     display: flex
     align-items: center
