@@ -1,0 +1,57 @@
+body, html 
+    padding: 0
+    margin: 0
+    font-family: 'Raleway', sans-serif
+@import import/gridlex
+@import _const
+
+section.cover 
+    min-height: 100vh 
+    background: $blue 
+    color: $white
+    background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #22a2d2 75%)
+    background: -webkit-linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #22a2d2 75%)
+    background: -moz-linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #22a2d2 75%)
+    background: -ms-linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #22a2d2 75%)
+    text-align: center 
+    display: flex
+    align-items: center
+    justify-content: center
+    a 
+        color: $white
+    h1 
+        font-size: 9em 
+        margin: .1em
+        color: $blue-transparent
+    h2 
+        font-size: 4em
+        margin: .1em
+        text-transform: capitalize
+    .logo 
+        position: absolute 
+        top: 0
+        width: 80px
+    .home-navigation 
+        position: absolute 
+        bottom: 0
+
+// navigations
+ul.horizontal-list
+    padding: 0
+    li  
+        list-style: none 
+        display: inline-block
+.home-navigation
+    li 
+        margin-left: 2px 
+        &:after
+            content: '/'
+            margin-left: 5px
+        &:last-child:after
+            content: ''
+        a
+            text-decoration: none 
+            text-transform: capitalize
+
+@import _grid
+@import _responsive
