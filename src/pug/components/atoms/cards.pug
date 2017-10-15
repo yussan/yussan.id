@@ -1,0 +1,15 @@
+mixin card-skills(title, data)
+    .col-4_sm-12.skills-item 
+        h3 #{title}
+        br 
+        each n in data 
+            .skills-item-text 
+                .pull-left #{n.text} 
+                .pull-right
+                    - let m = 1
+                    while m <= 5
+                        if m <= n.score
+                            i.fa.fa-star 
+                        else
+                            i.fa.fa-star-o
+                        - m++                   

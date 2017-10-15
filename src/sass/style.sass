@@ -7,41 +7,19 @@ body, html
 
 section.cover 
     position: relative
-    min-height: 100vh 
+    height: 100vh 
+    min-height: 450px
     background: $blue 
     color: $white
-    // background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #22a2d2 75%)
-    // background: -webkit-linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #22a2d2 75%)
-    // background: -moz-linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #22a2d2 75%)
-    // background: -ms-linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #22a2d2 75%)
     background: linear-gradient(328deg, #23b9db, #1d5aab, #0d0551, #093671)
+    background: -webkit-linear-gradient(328deg, #23b9db, #1d5aab, #0d0551, #093671)
+    background: -moz-linear-gradient(328deg, #23b9db, #1d5aab, #0d0551, #093671)
+    background: -ms-linear-gradient(328deg, #23b9db, #1d5aab, #0d0551, #093671)
     background-size: 800% 800%
 
-    -webkit-animation: AnimationName 16s ease infinite
-    -moz-animation: AnimationName 16s ease infinite
-    animation: AnimationName 16s ease infinite
-
-    @-webkit-keyframes AnimationName
-        0%
-            background-position: 2% 0%
-        50%
-            background-position: 99% 100%
-        100%
-            background-position: 2% 0%
-    @-moz-keyframes AnimationName
-        0%
-            background-position: 2% 0%
-        50%
-            background-position: 99% 100%
-        100%
-            background-position: 2% 0%
-    @keyframes AnimationName 
-        0%
-            background-position: 2% 0%
-        50%
-            background-position: 99% 100%
-        100%
-            background-position: 2% 0%
+    -webkit-animation: CoverAnimation 16s ease infinite
+    -moz-animation: CoverAnimation 16s ease infinite
+    animation: CoverAnimation 16s ease infinite    
 
     text-align: center 
     display: flex
@@ -64,6 +42,27 @@ section.cover
     .home-navigation 
         position: absolute 
         bottom: 0
+        transition: all 1s ease
+        &.fixed 
+            position: fixed
+            background: linear-gradient(328deg, #23b9db, #1d5aab, #0d0551, #093671)
+            background: -webkit-linear-gradient(328deg, #23b9db, #1d5aab, #0d0551, #093671)
+            background: -moz-linear-gradient(328deg, #23b9db, #1d5aab, #0d0551, #093671)
+            background: -ms-linear-gradient(328deg, #23b9db, #1d5aab, #0d0551, #093671)
+            background-size: 800% 800%
+            top: 0
+            -webkit-animation: CoverAnimation 16s ease infinite
+            -moz-animation: CoverAnimation 16s ease infinite
+            animation: CoverAnimation 16s ease infinite    
+            width: 100%
+            bottom: inherit
+            padding: 0
+
+section.home 
+    h2 
+        font-size: 6em 
+        margin: .5em 0
+        text-transform: uppercase
 
 // navigations
 ul.horizontal-list
@@ -83,5 +82,30 @@ ul.horizontal-list
             text-decoration: none 
             text-transform: capitalize
 
+// animation 
+@-webkit-keyframes CoverAnimation
+    0%
+        background-position: 2% 0%
+    50%
+        background-position: 99% 100%
+    100%
+        background-position: 2% 0%
+@-moz-keyframes CoverAnimation
+    0%
+        background-position: 2% 0%
+    50%
+        background-position: 99% 100%
+    100%
+        background-position: 2% 0%
+@keyframes CoverAnimation 
+    0%
+        background-position: 2% 0%
+    50%
+        background-position: 99% 100%
+    100%
+        background-position: 2% 0%
+
+@import _helper
 @import _grid
+@import _skills
 @import _responsive

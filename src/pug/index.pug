@@ -1,15 +1,16 @@
 extends layouts/default 
 
 block title 
-    title Yussan Portofolio 
+    title Yussan Portfolio 
 
-block content
+block content   
+    //- conver grid    
     section.cover.grid
         img.logo(src='/dist/images/logo-transparent.png' alt='yussan logo')
         .col-12 
             h1 I'M YUSSAN 
             h2 A Web Engineer & tech blogger
-        .col-12.home-navigation 
+        .col-12.home-navigation#home-navigation
             ul.horizontal-list 
                 li 
                     a(href="#skills") skills
@@ -23,3 +24,55 @@ block content
                     a(href="#events-contribution") events contribution
                 li 
                     a(href="#connect") Connect
+
+    //- skills grid
+    section.home.skills
+        - 
+            let programming = [
+                {text: 'Javascript + NodeJS', score: 4},
+                {text: 'CoffeeScript', score: 4},
+                {text: 'PHP', score: 4},
+                {text: 'Python', score: 3},
+                {text: 'Ruby', score: 3}
+            ]
+
+            let frameworks = [
+                {text: 'ReactJS', score: 4},
+                {text: 'Redux', score: 4},
+                {text: 'Pug + Sass', score: 4},
+                {text: 'Laravel', score: 4},
+                {text: 'Rails', score: 3},
+                {text: 'Flask', score: 3}
+            ]
+
+            let db = [
+                {text: 'MySQL', score: 4},
+                {text: 'SQlite', score: 4},
+                {text: 'PostgreSQL', score: 4},
+                {text: 'Redis', score: 3},
+                {text: 'Mongo', score: 3}
+            ]
+
+            let tools = [
+                {text: 'Webpack', score: 4},
+                {text: 'Gulp + Grunt', score: 4},
+            ]
+            
+
+            let extra = [
+                {text: 'Firebase', score: 4},
+                {text: 'PasS', score: 4},
+                {text: 'NGINX', score: 4},
+                {text: 'Docker', score: 4}
+            ]
+        .container
+            .grid 
+                .col-12 
+                    h2 Skills
+            .grid
+                include components/atoms/cards
+                +card-skills('Language Programming', programming)
+                +card-skills('Frameworks & Libs', frameworks)
+                +card-skills('Database', db)
+                +card-skills('Dev Tools', tools)
+                +card-skills('Extra', extra)
