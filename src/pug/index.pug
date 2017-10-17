@@ -25,54 +25,18 @@ block content
                 li 
                     a(href="#connect") Connect
 
+    //- about grid
+    section.home.about.bg-gray 
+        p 
+            | My name is "Yusuf Akhsan Hidayat", i am from DIY, Indonesia.
+            br
+            | I like to code some Javascript apps, contributing on Github open source repo and joining some tech competition.
+            br 
+            | For out of the world of programming, I like to write something about tech too.
+            br
+        span(style="font-style:normal;font-weight:normal") Yussan 2017
     //- skills grid
-    section.home.skills
-        - 
-            let programming = [
-                {text: 'Javascript + NodeJS', score: 4},
-                {text: 'CoffeeScript', score: 4},
-                {text: 'PHP', score: 4},
-                {text: 'Python', score: 3},
-                {text: 'Ruby', score: 3}
-            ]
+    include components/molecules/skills
 
-            let frameworks = [
-                {text: 'ReactJS', score: 4},
-                {text: 'Redux', score: 4},
-                {text: 'Pug + Sass', score: 4},
-                {text: 'Laravel', score: 4},
-                {text: 'Rails', score: 3},
-                {text: 'Flask', score: 3}
-            ]
-
-            let db = [
-                {text: 'MySQL', score: 4},
-                {text: 'SQlite', score: 4},
-                {text: 'PostgreSQL', score: 4},
-                {text: 'Redis', score: 3},
-                {text: 'Mongo', score: 3}
-            ]
-
-            let tools = [
-                {text: 'Webpack', score: 4},
-                {text: 'Gulp + Grunt', score: 4},
-            ]
-            
-
-            let extra = [
-                {text: 'Firebase', score: 4},
-                {text: 'PasS', score: 4},
-                {text: 'NGINX', score: 4},
-                {text: 'Docker', score: 4}
-            ]
-        .container
-            .grid 
-                .col-12 
-                    h2 Skills
-            .grid
-                include components/atoms/cards
-                +card-skills('Language Programming', programming)
-                +card-skills('Frameworks & Libs', frameworks)
-                +card-skills('Database', db)
-                +card-skills('Dev Tools', tools)
-                +card-skills('Extra', extra)
+    //- experiences
+    include components/molecules/work-experiences

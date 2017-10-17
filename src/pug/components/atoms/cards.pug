@@ -1,15 +1,38 @@
 mixin card-skills(title, data)
-    .col-4_sm-12.skills-item 
-        h3 #{title}
-        br 
-        each n in data 
-            .skills-item-text 
-                .pull-left #{n.text} 
-                .pull-right
-                    - let m = 1
-                    while m <= 5
-                        if m <= n.score
-                            i.fa.fa-star 
-                        else
-                            i.fa.fa-star-o
-                        - m++                   
+	.col-4_sm-12.skills-item
+		h3 #{title}
+		br 
+		each n in data 
+			.skills-item-text 
+				.pull-left #{n.text} 
+				.pull-right
+					- let m = 1
+					while m <= 5
+						if m <= n.score
+							i.fa.fa-star 
+						else
+							i.fa.fa-star-o
+						- m++       
+
+mixin card-work(data) 
+	.col-4_md-6_sm-12.work-item
+		.work-item-content
+			.cover 
+				a(href="")
+					img(src=data.thumb)
+			.meta
+				a(href="")
+					h1 #{data.title}
+				h2 #{data.desc}	
+				p 
+					strong Worked as 
+					| #{data.as}
+					br
+					strong At 
+					| #{data.at}
+					br
+					strong Year 
+					| #{data.year}
+					br 
+					strong DevStack 
+					| #{data.dev}

@@ -1,0 +1,75 @@
+include ../atoms/cards 
+section.home.skills
+    .grid.bg-gray(style="margin-bottom: 1em")
+        .col-12.home-title 
+            h2 Work Experiences
+            h3 Here are some of my experiences in the world of work
+    - 
+        let data = [
+            {
+                title: 'Sebangsa Web v2 - v3', 
+                desc: 'Indonesian social media for community',
+                thumb: '/dist/images/works/sebangsa.png',
+                as: 'web frontend',
+                at: 'PT Sebangsa Bersama',
+                year: '2015 - 2016',
+                dev: 'ReactJS + ReactRouter + Reflux + etc'
+            },
+            {
+                title: 'Oopsreview.com', 
+                desc: 'CMS blog software review',
+                thumb: '/dist/images/works/sebangsa.png',
+                as: 'web fullstack',
+                at: 'Id More',
+                year: '2016',
+                dev: 'Nodejs + Ghost CMS + MySQL'
+            },
+            {
+                title: 'Aidpost v2', 
+                desc: 'Platform to connnect aid community arround the world',
+                thumb: '/dist/images/works/aidpost.png',
+                as: 'web frontend',
+                at: 'Canada - Freelancer',
+                year: '2015 - 2016',
+                dev: 'ReactJS + Lumen + restful client + etc'
+            },
+            {
+                title: 'Kompetisi.id v4', 
+                desc: 'Indonesian online competition platform',
+                thumb: '/dist/images/works/sebangsa.png',
+                as: 'web frontend',
+                at: 'Id More',
+                year: '2014 - 2017',
+                dev: 'Nodejs + ReactJS + ReactRouter + Redux + Firebase + Restful'
+            },
+            {
+                title: 'TECS Web', 
+                desc: 'Online shop of "Time Excelindo Service and Computer" Yogyakarta',
+                thumb: '/dist/images/works/sebangsa.png',
+                as: 'web fullstack',
+                at: 'TECS Yogyakarta',
+                year: '2014',
+                dev: 'Codeigniter + MySQL + etc'
+            },
+            {
+                title: 'WK Group - POS and Inventory',
+                desc: 'Point of sale and Inventory system of "Wk Group" Lampung', 
+                thumb: '/dist/images/works/sebangsa.png',
+                as: 'web fullstack',
+                at: 'WK Group Lampung',
+                year: '2013',
+                dev: 'Codeigniter + MySQL + etc'
+            },
+            {
+                title: 'WK Group - POS and Inventory', 
+                desc: 'Point of sale and Inventory system of "Wk Group" Lampung', 
+                thumb: '/dist/images/works/sebangsa.png',
+                as: 'web fullstack',
+                at: 'WK Group Lampung',
+                year: '2013',
+                dev: 'Codeigniter + MySQL + etc'
+            }
+        ]
+    .grid
+        each n in data
+            + card-work(n) 
