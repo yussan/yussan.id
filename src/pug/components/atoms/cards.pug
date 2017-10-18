@@ -26,16 +26,16 @@ mixin card-work(data)
 				p
 					| #{data.desc}
 					br
-					//- strong Worked as 
-					//- | #{data.as}
-					//- br
-					//- strong At 
-					//- | #{data.at}
-					//- br
-					//- strong Year 
-					//- | #{data.year}
-					//- br 
 				small
 					strong #{data.as}&nbsp;
 					| - 
 					| #{data.dev}
+
+mixin card-opensource(data)
+	.col-2_md-4_sm-6.opensource-item 
+		a(href=data.link target="_blank") 
+			img(src=data.thumb)
+		p 
+			Strong #{data.title}
+			br
+			small.text-gray #{data.desc}.

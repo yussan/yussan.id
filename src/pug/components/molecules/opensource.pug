@@ -1,0 +1,43 @@
+include ../atoms/cards 
+section.home.skills
+    .grid.bg-gray(style="margin-bottom: 1em")
+        .col-12.home-title 
+            h2 Open Source
+            h3 I love to contribute in open source projects
+            
+    .container
+        .grid-3-center 
+            .col-12.align-center 
+                h3 Project That I Started 
+            - 
+                let myprojects = [
+                    {
+                        title: 'NPM String Manager',
+                        desc: 'NPM dependency to manage your string',
+                        link: 'https://www.npmjs.com/package/string-manager',
+                        thumb: '/dist/images/opensources/stringmanager.png'
+                    },
+                    {
+                        title: 'Grunt Pug Sass Boilerplate',
+                        desc: 'Let\'s build some Grunt+Pug+Sass projects',
+                        link: 'https://github.com/yussan/grunt-pug-sass-boilerplate',
+                        thumb: '/dist/images/opensources/stringmanager.png'
+                    },
+                    {
+                        title: 'React Redux Isomorphic App',
+                        desc: 'Server rendering and request using React + Redux + Express',
+                        link: 'https://github.com/yussan/react-redux-isomorphic-boilerplate',
+                        thumb: '/dist/images/opensources/stringmanager.png'
+                    },
+                    {
+                        title: 'Exploration Service Worker',
+                        desc: 'Let\'s get started with Service Worker',
+                        link: 'https://github.com/yussan/exploration-service-worker',
+                        thumb: '/dist/images/opensources/stringmanager.png'
+                    }
+                ]
+            include ../atoms/cards
+            each n in myprojects 
+                +card-opensource(n)
+            
+            
