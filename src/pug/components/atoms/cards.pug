@@ -18,10 +18,10 @@ mixin card-work(data)
 	.col-4_md-6_sm-12.work-item
 		.work-item-content
 			.cover 
-				a(href="")
+				a(href=data.link target='_blank')
 					img(src=data.thumb)
 			.meta
-				a(href="")
+				a(href=data.link target='_blank')
 					h1 #{data.title}
 				p
 					| #{data.desc}
