@@ -23,16 +23,19 @@ mixin card-work(data)
 			.meta
 				a(href="")
 					h1 #{data.title}
-				h2 #{data.desc}	
-				p 
-					strong Worked as 
-					| #{data.as}
+				p
+					| #{data.desc}
 					br
-					strong At 
-					| #{data.at}
-					br
-					strong Year 
-					| #{data.year}
-					br 
-					strong DevStack 
+					//- strong Worked as 
+					//- | #{data.as}
+					//- br
+					//- strong At 
+					//- | #{data.at}
+					//- br
+					//- strong Year 
+					//- | #{data.year}
+					//- br 
+				small
+					strong #{data.as}&nbsp;
+					| - 
 					| #{data.dev}

@@ -4,6 +4,7 @@ section.home.skills
         .col-12.home-title 
             h2 Work Experiences
             h3 Here are some of my experiences in the world of work
+            
     - 
         let data = [
             {
@@ -70,6 +71,7 @@ section.home.skills
                 dev: 'Codeigniter + MySQL + etc'
             }
         ]
-    .grid
-        each n in data
-            + card-work(n) 
+    .container
+        .grid
+            each n in data
+                + card-work(n) 
