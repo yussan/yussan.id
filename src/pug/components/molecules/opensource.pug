@@ -1,7 +1,7 @@
 include ../atoms/cards 
 section.home.skills
-    .grid.bg-gray(style="margin-bottom: 1em")
-        .col-12.home-title 
+    .grid-center.bg-gray(style="margin-bottom: 1em")
+        .col-6_sm-12.home-title 
             h2 Open Source
             h3 I love to contribute in open source projects
             
@@ -43,6 +43,12 @@ section.home.skills
                         desc: 'lightweight top-loader for web',
                         link: 'https://www.npmjs.com/package/top-loader',
                         thumb: '/dist/images/opensources/npm logo.png'
+                    },
+                    {
+                        title: 'docker-nodejs-boilerplate',
+                        desc: 'Build Node JS project using Docker',
+                        link: 'https://github.com/yussan/docker-nodejs-boilerplate',
+                        thumb: '/dist/images/opensources/github logo.png'
                     }
                 ]
                 let mycontributions = [
@@ -66,4 +72,4 @@ section.home.skills
                 each n in mycontributions 
                     +card-opensource(n)
                 
-            
+            P

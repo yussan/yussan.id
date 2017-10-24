@@ -1,0 +1,36 @@
+include ../atoms/cards 
+section.home.skills
+    .grid-center.bg-gray(style="margin-bottom: 1em")
+        .col-6_sm-12.home-title 
+            h2 My Writing
+            h3 Here are some of my writings, it included writings about technology and personal blog.
+            
+    .container
+            - 
+                let mywritings = [
+                    {
+                        title: 'Medium.com',
+                        link: 'https://medium.com/@yussan',
+                        desc: 'What i do as engineer',
+                        thumb: '/dist/images/works/medium.png'
+                    },
+                    {
+                        title: 'Oopsreview.com',
+                        link: 'https://oopsreview.com/author/yussan',
+                        desc: 'Software reviewer',
+                        thumb: '/dist/images/works/oopsreview-square.png'
+                    },
+                    {
+                        title: 'Yussan Blog',
+                        link: 'https://yussanblog.blogspot.co.id',
+                        desc: 'Personal blog',
+                        thumb: '/dist/images/works/blogger.png'
+                    }
+                ]
+                
+            include ../atoms/cards
+            .grid-3-center
+                .col-12.align-center 
+                    h3 Happy Reading
+                each n in mywritings 
+                    +card-opensource(n)
