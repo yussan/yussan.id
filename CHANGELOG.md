@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.1.0"></a>
+# [0.1.0](https://github.com/yussan/yussan.github.io/compare/v0.1.0-beta.3...v0.1.0) (2017-10-24)
+
+
+### Bug Fixes
+
+* **homepage:** finished ([d898041](https://github.com/yussan/yussan.github.io/commit/d898041))
+
+
+### Features
+
+* **open sources:** added open sources ([00e704c](https://github.com/yussan/yussan.github.io/commit/00e704c))
+* **skills:** added skill section and navbar animation on scroll ([a2f2aa4](https://github.com/yussan/yussan.github.io/commit/a2f2aa4))
+* **works:** wip work experience ([e22f388](https://github.com/yussan/yussan.github.io/commit/e22f388))
+
+
+
 <a name="0.1.0-beta.3"></a>
 # [0.1.0-beta.3](https://github.com/yussan/yussan.github.io/compare/v0.1.0-beta.2...v0.1.0-beta.3) (2017-10-14)
 
