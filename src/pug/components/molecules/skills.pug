@@ -8,9 +8,16 @@ section.home.skills
             {text: 'Ruby', score: 3}
         ]
 
-        let frameworks = [
-            {text: 'ReactJS', score: 4},
+        let js = [
+            {text: 'ReactJS', score: 4.5},
+            {text: 'ExpressJS', score: 4.5},
+            {text: 'Restify', score: 4.5},
             {text: 'Redux', score: 4},
+            {text: 'VueJS', score: 4.5},
+            {text: 'Other libraries', score: 4}
+        ]
+
+        let frameworks = [
             {text: 'Pug + Sass', score: 4},
             {text: 'Laravel', score: 4},
             {text: 'Rails', score: 3},
@@ -18,26 +25,17 @@ section.home.skills
         ]
 
         let db = [
+            {text: 'Mongo', score: 4},
             {text: 'MySQL', score: 4},
-            {text: 'SQlite', score: 4},
-            {text: 'PostgreSQL', score: 4},
-            {text: 'Redis', score: 3},
-            {text: 'Mongo', score: 3}
-        ]
-
-         let js = [
-            {text: 'ExpressJS', score: 4.5},
-            {text: 'Restify', score: 4.5},
-            {text: 'ReactJS', score: 4.5},
-            {text: 'VueJS', score: 4.5},
-            {text: 'Other libraries', score: 4}
+            {text: 'SQlite', score: 3.5},
+            {text: 'PostgreSQL', score: 3.5},
+            {text: 'Redis', score: 3}
         ]
 
         let tools = [
             {text: 'Webpack', score: 4},
-            {text: 'Gulp + Grunt', score: 4},
+            {text: 'Gulp / Grunt', score: 4}
         ]
-        
 
         let extra = [
             {text: 'Firebase', score: 4},
@@ -52,8 +50,8 @@ section.home.skills
         .grid
             include ../atoms/cards
             +card-skills('Language Programming', programming)
-            +card-skills('Frameworks & Libs', frameworks)
-            +card-skills('Database', db)
             +card-skills('JS Frameworks and Libs', js)
+            +card-skills('Non JS Frameworks & Libs', frameworks)
+            +card-skills('Database', db)
             +card-skills('Dev Tools', tools)
             +card-skills('Extra', extra)
