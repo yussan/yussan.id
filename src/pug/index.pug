@@ -13,17 +13,17 @@ block content
         .col-12.home-navigation#home-navigation
             ul.horizontal-list 
                 li 
-                    a(href="#skills") skills
+                    a(onclick="smoothScroll('skills')" href="javascript:;") Skills
                 li 
-                    a(href="#work-experience") work experience
+                    a(onclick="smoothScroll('work-experience')" href="javascript:;") Work experience
                 li 
-                    a(href="#open-source-projects") Open Source Projects
+                    a(onclick="smoothScroll('open-source-projects')" href="javascript:;") Open Source Projects
                 li 
-                    a(href="#certifications") certifications
+                    a(onclick="smoothScroll('certifications')"  href="javascript:;") Certifications
                 li 
-                    a(href="#events-contribution") events contribution
+                    a(onclick="smoothScroll('writings')" href="javascript:;") Writings
                 li 
-                    a(href="#connect") Connect
+                    a(onclick="smoothScroll('connect')" href="javascript:;") Connect
 
     //- about grid
     section.home.about.bg-gray 
@@ -48,7 +48,7 @@ block content
     include components/molecules/writing
     
     //- available for frelance work
-    section.cover.available
+    section.cover.available#connect
         .grid-center
             .col-8_sm-12
                 p.title I'm available for freelance job.
@@ -73,3 +73,12 @@ block content
                     | &copy; 2017 - 2018 Yusuf Akhsan Hidayat 
                     br 
                     | Yogyakarta, Indonesia 
+
+    script.
+        window.smoothScroll = (targetId='') => {
+            const el = document.getElementById(targetId);
+            el.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start' 
+                });
+        }
