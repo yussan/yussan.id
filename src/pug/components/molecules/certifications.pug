@@ -1,0 +1,41 @@
+include ../atoms/cards 
+section.home.skills#certifications
+    .grid-center.bg-gray(style="margin-bottom: 1em")
+        .col-6_sm-12.home-title 
+            h2 Certifications and Awards
+            h3 some certifications and awards i have
+            
+    - 
+        let cert_data = [
+            {
+                title: 'Surat pencatatan penciptaan Linuxourse',
+                link: 'https://photos.google.com/share/AF1QipNzc8257LArpn0fjEer93Jblj896iiLyhaHvqn__d9nd5VcM2YMgPzH-s67eQ-0FA/photo/AF1QipO2eDBWsYsbkZsMp2SN87zLAgAMRf2DeiLzYycs?key=RHF3QmJwZS1QWmtLd2QyZ0tGQWJwSERydFE1dXF3',
+                desc: 'Number C222201600005.  12 January 2016 until next 50 years.',
+                //- thumb: '/dist/images/works/sebangsa.png',
+                as: 'Published by',
+                year: '2016 - 2056',
+                dev: 'Republik Indonesia Kementrian Hukum dan Hak Asasi Indonesia'
+            },
+            {
+                title: 'Nominate INAICTA 2015 category Education and culture',
+                link: 'https://tekno.kompas.com/read/2015/09/10/12440007/Ini.Dia.Pemenang.Lomba.Aplikasi.Inaicta.2015',
+                desc: 'With idmore team, we are creating some web app called Linuxourse, it\'s online learning platform to study about Linux and Linux shell, same as Codecademy',
+                //- thumb: '/dist/images/works/sebangsa.png',
+                as: 'Published by',
+                year: '2016 - 2056',
+                dev: 'Republik Indonesia Kementrian Komunikasi dan Informatika'
+            },
+            {
+                title: 'Merrit AMICTA 2015 category Research and Development',
+                link: 'https://photos.google.com/share/AF1QipMPOjWXJOlaIZOHnImNL711seqRRsGbt-5t-e0vq3JKcuFQlZcKasD6fcfeh3fWGA/photo/AF1QipOtDxhRsW32gzvmxRqNaPdgcEd3j_eiw9bLetrt?key=bmlrVHRIX3dueEh1SHFKQm5hSThWZDZpY0lGVXZR',
+                desc: 'With idmore team, we are creating some web app called Linuxourse, it\'s online learning platform to study about Linux and Linux shell, same as Codecademy',
+                //- thumb: '/dist/images/works/sebangsa.png',
+                as: 'Published by',
+                year: '2016 - 2056',
+                dev: 'Universitas Amikom Yogyakarta'
+            }
+        ]
+    .container
+        .grid
+            each n in cert_data
+                + card-work(n) 
