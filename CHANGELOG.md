@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.2.0"></a>
+# [0.2.0](https://github.com/yussan/yussan.github.io/compare/v0.1.1...v0.2.0) (2019-04-03)
+
+
+### Bug Fixes
+
+* **navbar:** handle active link on navbar by section ([9b3c834](https://github.com/yussan/yussan.github.io/commit/9b3c834)), closes [#4](https://github.com/yussan/yussan.github.io/issues/4)
+
+
+### Features
+
+* **certification page:** added certification page ([3c2b967](https://github.com/yussan/yussan.github.io/commit/3c2b967))
+* **scroll into view:** added scroll into view animation ([b568f91](https://github.com/yussan/yussan.github.io/commit/b568f91))
+
+
+
 <a name="0.1.1"></a>
 ## [0.1.1](https://github.com/yussan/yussan.github.io/compare/v0.1.0...v0.1.1) (2018-03-22)
 
