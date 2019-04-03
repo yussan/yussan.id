@@ -1395,6 +1395,8 @@ ul.horizontal-list {
   ul.horizontal-list li {
     list-style: none;
     display: inline-block; }
+    ul.horizontal-list li a.active {
+      font-weight: bold; }
 
 .home-navigation li {
   margin-left: 2px; }

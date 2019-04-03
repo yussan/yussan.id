@@ -13,17 +13,17 @@ block content
         .col-12.home-navigation#home-navigation
             ul.horizontal-list 
                 li 
-                    a(onclick="smoothScroll('skills')" href="javascript:;") Skills
+                    a(class="horizontal-list-to" id="to-skills" href="javascript:;" onclick="smoothScroll('skills')") Skills
                 li 
-                    a(onclick="smoothScroll('work-experience')" href="javascript:;") Work experience
+                    a(class="horizontal-list-to" id="to-work-experience" href="javascript:;" onclick="smoothScroll('work-experience')") Work experience
                 li 
-                    a(onclick="smoothScroll('open-source-projects')" href="javascript:;") Open Source Projects
+                    a(class="horizontal-list-to" id="to-open-source-projects" href="javascript:;" onclick="smoothScroll('open-source-projects')") Open Source Projects
                 li 
-                    a(onclick="smoothScroll('certifications')"  href="javascript:;") Certifications
+                    a(class="horizontal-list-to" id="to-certifications" href="javascript:;" onclick="smoothScroll('certifications')") Certifications
                 li 
-                    a(onclick="smoothScroll('writings')" href="javascript:;") Writings
+                    a(class="horizontal-list-to" id="to-writings" href="javascript:;" onclick="smoothScroll('writings')") Writings
                 li 
-                    a(onclick="smoothScroll('connect')" href="javascript:;") Connect
+                    a(class="horizontal-list-to" id="to-connect" href="javascript:;" onclick="smoothScroll('connect')") Connect
 
     //- about grid
     section.home.about.bg-gray 
@@ -61,16 +61,16 @@ block content
                         a(href="mailto:business.yussan@gmail.com" title="Contact via email")
                             img(src="/dist/images/email_icon.png")
                     li 
-                        a(href="https://facebook.com/xyussanx" target="_blank" title="Contact via Facebook")
+                        a(href="https://facebook.com/xyussanx" title="Contact via Facebook" target="_blank")
                             img(src="/dist/images/facebook_icon.png")
                     li
-                        a(href="https://facebook.com/xyussanx" target="_blank" title="Contact via Twitter")
+                        a(href="https://twitter.com/xyussanx" title="Contact via Twitter" target="_blank")
                             img(src="/dist/images/twitter_icon.png")
                     li
-                        a(href="https://instagram.com/xyussanx" target="_blank" title="Contact via Instagram")
+                        a(href="https://instagram.com/xyussanx" title="Contact via Instagram" target="_blank")
                             img(src="/dist/images/instagram_icon.png")
                     li 
-                        a(href="https://www.linkedin.com/in/yussan" target="_blank" title="Contact via Linkedin")
+                        a(href="https://www.linkedin.com/in/yussan" title="Contact via Linkedin" target="_blank")
                             img(src="/dist/images/linkedin_icon.png")
                 small
                     | &copy; 2017 - 2018 Yusuf Akhsan Hidayat 
@@ -78,6 +78,10 @@ block content
                     | Yogyakarta, Indonesia 
 
     script.
+        let B= document.body; //IE 'quirks'
+        let D= document.documentElement; //IE with doctype
+        D = (D.clientHeight)? D: B;
+
         window.smoothScroll = (targetId='') => {
             const el = document.getElementById(targetId);
             el.scrollIntoView({
@@ -85,3 +89,42 @@ block content
                 block: 'start' 
                 });
         }
+
+        let timeoutSeNavbarActive
+        const menus = document.querySelectorAll(".horizontal-list > li > a.horizontal-list-to")
+
+        const sectionsIds = [
+          "skills", "work-experience", "open-source-projects", "certifications", "writings", "connect"
+        ]
+        window.sections = []
+        sectionsIds.map(id => {
+          el = document.getElementById(id)
+          window.sections.push({
+            id,
+            start: el.offsetTop,
+            end: el.offsetTop + el.clientHeight
+          })
+        })
+
+        document.addEventListener("scroll", () => {
+          //- clear timeout to set navbar active
+          clearTimeout(timeoutSeNavbarActive)
+          timeoutSeNavbarActive = setTimeout(() => {
+            const pos = D.scrollTop
+            for(n=0;n < window.sections.length;n++) {
+              if(pos >= window.sections[n].start - 20 && pos <= window.sections[n].end - 20){
+                for(let n=0;n<menus.length;n++) {
+                  menus[n].classList.remove("active")
+                }
+                document.getElementById(to- + window.sections[n].id active)
+                break
+              }
+              else if (pos < window.sections[0].start) {
+                for(let n=0;n<menus.length;n++) {
+                  menus[n].classList.remove("active")
+                }
+              }
+            }
+          }, 100)
+        })
+
