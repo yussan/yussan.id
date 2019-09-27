@@ -33,9 +33,20 @@ mixin card-work(data)
 
 mixin card-opensource(data)
 	.col-2_md-4_sm-6.opensource-item 
-		a(href=data.link target="_blank") 
+		a(href=data.link target="_blank" rel="noopener noreferer") 
 			img(src=data.thumb)
 		p 
 			Strong #{data.title}
 			br
-			small.text-gray #{data.desc}.
+			small.color-gray #{data.desc}.
+
+mixin card-works(data)
+	.col-3_md-3_sm-6.works-item 
+		a(href=data.link target="_blank" rel="noopener noreferer") 
+			img(src=data.thumb)
+		p 
+			Strong #{data.title}
+			br
+			small #{data.desc}.
+			br 
+			small.color-gray #{data.time}

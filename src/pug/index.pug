@@ -15,7 +15,9 @@ block content
                 li 
                     a(class="horizontal-list-to" id="to-skills" href="javascript:;" onclick="smoothScroll('skills')") Skills
                 li 
-                    a(class="horizontal-list-to" id="to-work-experience" href="javascript:;" onclick="smoothScroll('work-experience')") Work experience
+                    a(class="horizontal-list-to" id="to-projects" href="javascript:;" onclick="smoothScroll('projects')") Projects
+                li 
+                    a(class="horizontal-list-to" id="to-work-experiences" href="javascript:;" onclick="smoothScroll('work-experiences')") Work Experiences
                 li 
                     a(class="horizontal-list-to" id="to-open-source-projects" href="javascript:;" onclick="smoothScroll('open-source-projects')") Open Source Projects
                 li 
@@ -39,7 +41,10 @@ block content
     include components/molecules/skills
 
     //- experiences
-    include components/molecules/work-experiences
+    include components/molecules/projects
+
+    //- work experience
+    include components/molecules/work-experience
 
     //- opensource projects
     include components/molecules/opensource
@@ -61,6 +66,9 @@ block content
                         a(href="mailto:business.yussan@gmail.com" title="Contact via email")
                             img(src="/dist/images/email_icon.png")
                     li 
+                        a(href="https://www.linkedin.com/in/yussan" title="Contact via Linkedin" target="_blank")
+                            img(src="/dist/images/linkedin_icon.png")
+                    li 
                         a(href="https://facebook.com/xyussanx" title="Contact via Facebook" target="_blank")
                             img(src="/dist/images/facebook_icon.png")
                     li
@@ -69,9 +77,7 @@ block content
                     li
                         a(href="https://instagram.com/xyussanx" title="Contact via Instagram" target="_blank")
                             img(src="/dist/images/instagram_icon.png")
-                    li 
-                        a(href="https://www.linkedin.com/in/yussan" title="Contact via Linkedin" target="_blank")
-                            img(src="/dist/images/linkedin_icon.png")
+                    
                 small
                     | &copy; 2017 - 2019 Yusuf Akhsan Hidayat 
                     br 
@@ -92,9 +98,10 @@ block content
 
         let timeoutSeNavbarActive
         const menus = document.querySelectorAll(".horizontal-list > li > a.horizontal-list-to")
-
+        
+        //- list of available target id's
         const sectionsIds = [
-          "skills", "work-experience", "open-source-projects", "certifications", "writings", "connect"
+          "skills", "projects", "works", "open-source-projects", "certifications", "writings", "connect"
         ]
         window.sections = []
         sectionsIds.map(id => {

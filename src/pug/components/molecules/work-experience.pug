@@ -1,0 +1,55 @@
+include ../atoms/cards 
+section.home.skills#work-experiences
+    .grid-center.bg-gray(style="margin-bottom: 1em")
+        .col-6_sm-12.home-title 
+            h2 Work Experiences
+            h3 The following is a list of companies I have worked with.
+            
+    .container
+            - 
+              let works = [
+                  {
+                      title: 'Sebangsa Network',
+                      desc: 'Javascript Engineer',
+                      link: 'https://sebangsanetwork.com',
+                      thumb: '/dist/images/works/logo-sebangsanetwork.png',
+                      time: "July 2015 - Present"
+                  },
+                  {
+                      title: 'PT IAM Mitra Mandiri',
+                      desc: 'Web Fullstack Engineer (Freelance)',
+                      link: 'https://www.pinopi.com',
+                      thumb: '/dist/images/works/logo-pinopi.jpg',
+                      time: "March - May 2018"
+                  },
+                  {
+                      title: 'Aidpost',
+                      desc: 'Web Fullstack Engineer (Freelance)',
+                      link: 'https://aidpost.org',
+                      thumb: '/dist/images/works/logo-aidpost.png',
+                      time: "2015 - 2017"
+                  },
+                  {
+                      title: 'Id More',
+                      desc: 'Founder + Research and Development',
+                      link: 'https://byidmore.com',
+                      thumb: '/dist/images/works/logo-idmore.png',
+                      time: "April 2015 - Present"
+                  },
+                  {
+                      title: 'Universitas Amikom',
+                      desc: 'Practicum assistants for several courses: Operating Systems (Linux), Hardware Software 1, Web Programming and Computer Graphics',
+                      link: 'https://www.npmjs.com/package/string-manager',
+                      thumb: '/dist/images/works/logo-amikom.png',
+                      time: "July 2012 - Aug 2014"
+                  }
+              ]
+             
+            include ../atoms/cards
+            .grid-3-center 
+                .col-12.align-center 
+                    h3 Work Experiences
+                each n in works 
+                    +card-works(n)
+
+            P
