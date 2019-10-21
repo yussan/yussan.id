@@ -1,25 +1,25 @@
 include ../atoms/cards 
-section.home.skills#writings
+section.home.skills#contents
     .grid-center.bg-gray(style="margin-bottom: 1em")
         .col-6_sm-12.home-title 
-            h2 My Writing
-            h3 Here are some of my writings, it included writings about technology and personal blog.
+            h2 My Contents
+            h3 Here are some of my contents, it included writings about technology, personal blog and some Youtube videos.
             
     .container
             - 
                 let mywritings = [
+                    {
+                        title: 'Id More Academy Youtube',
+                        link: 'https://www.youtube.com/playlist?list=PLS4ZGsbwdrggZojXH5OcR5raLtCq2vMUD',
+                        desc: 'Host',
+                        thumb: '/dist/images/works/logo-youtube-idmore-academy.png'
+                    },
                     {
                         title: 'Id More Academy',
                         link: 'https://academy.byidmore.com/author/yussan',
                         desc: 'Author',
                         thumb: '/dist/images/works/idmore-square.png'
                     },
-                    //- {
-                    //-     title: 'Medium.com',
-                    //-     link: 'https://medium.com/@yussan',
-                    //-     desc: 'What i do as engineer',
-                    //-     thumb: '/dist/images/works/medium.png'
-                    //- },
                     {
                         title: 'Oopsreview.com',
                         link: 'https://oopsreview.com/author/yussan',
@@ -43,6 +43,6 @@ section.home.skills#writings
             include ../atoms/cards
             .grid-3-center
                 .col-12.align-center 
-                    h3 Happy Reading
+                    h3 Happy Reading and Watching
                 each n in mywritings 
                     +card-opensource(n)
