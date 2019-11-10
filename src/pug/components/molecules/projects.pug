@@ -4,10 +4,30 @@ section.home.skills#projects
         .col-6_sm-12.home-title 
             h2 My Projects
             h3 The following are some of the latest projects that I have already completed
-            
+
     - 
         let data = [
-          {
+            {
+                title: 'Arena Dashboard',
+                link: 'https://arena.id',
+                desc: 'Dashboard page of Arena Id',
+                thumb: '/dist/images/works/arena-dashboard.png',
+                as: 'web frontend',
+                at: 'Sebangsa Network',
+                year: '2019',
+                dev: 'ExpressJS + ReactJS'
+            },
+            {
+                title: 'Oopsreview Web v3',
+                link: 'https://oopsreview.com',
+                desc: 'Software Review Specialist',
+                thumb: '/dist/images/works/oopsreview-v3.png',
+                as: 'web fullstack',
+                at: 'Id More',
+                year: '2019',
+                dev: 'Restify + VueJS + MongoDB'
+            },
+            {
                 title: 'Mau Gowes Web v1',
                 link: 'https://maugowes.com',
                 desc: 'Indonesian Cycling Platform',
@@ -27,7 +47,7 @@ section.home.skills#projects
                 year: '2018 - 2019',
                 dev: 'MySQL + Nodejs + ReactJS + ReactRouter + Redux'
             },
-          {
+            {
                 title: 'Sebangsa Web v7',
                 link: 'https://sebangsa.com',
                 desc: 'Platform Aktivitas Komunitas',
@@ -188,7 +208,8 @@ section.home.skills#projects
                 dev: 'Codeigniter + MySQL + etc'
             }
         ]
-    .container
-        .grid
-            each n in data
-                + card-work(n) 
+    div.overflow-project-container
+        .container
+            .grid
+                each n in data
+                    + card-work(n) 

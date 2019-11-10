@@ -1452,6 +1452,10 @@ ul.horizontal-list {
   width: 990px;
   margin: 0 auto; }
 
+.overflow-project-container {
+  height: 800px;
+  overflow: auto; }
+
 .skills .skills-item {
   padding: 0 3.5em 3.5em; }
   .skills .skills-item .skills-item-text {
@@ -1517,6 +1521,10 @@ section.cover.available {
   .opensource-item img {
     width: 100%;
     border-radius: 500px; }
+
+.overflow-project-container {
+  height: 800px;
+  overflow: auto; }
 
 .skills .skills-item {
   padding: 0 3.5em 3.5em; }
