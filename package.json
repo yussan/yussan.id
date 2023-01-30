@@ -8,8 +8,7 @@
   "license": "MIT",
   "scripts": {
     "start": "yarn dev:build",
-    "dev:build": "grunt",
-    "prod:build": "NODE_ENV=production grunt",
+    "build": "NODE_ENV=production grunt",
     "release": "standard-version",
     "release:beta": "standard-version -p beta"
   },

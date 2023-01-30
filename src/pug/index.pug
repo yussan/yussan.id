@@ -78,21 +78,29 @@ block content
                         a(href="https://stackoverflow.com/users/2780875/yussan" title="go to Yussan Stackoverflow account" target="_blank" rel="noopener noreferrer")
                             img(src="/dist/images/stackoverflow_icon.png")
                     li
-                        a(href="https://twitter.com/yussandotid" title="Contact via Twitter" target="_blank" rel="noopener noreferrer")
+                        a(href="https://twitter.com/yussanid" title="Contact via Twitter" target="_blank" rel="noopener noreferrer")
                             img(src="/dist/images/twitter_icon.png")
                     li
                         a(href="https://instagram.com/yussan.id" title="Contact via Instagram" target="_blank" rel="noopener noreferrer")
                             img(src="/dist/images/instagram_icon.png")
                     
                 small
-                    | &copy; 2017 - 2022 Yusuf Akhsan Hidayat 
+                    | &copy; 2017 - 2023 Yusuf Akhsan Hidayat 
                     br 
                     | Yogyakarta, Indonesia 
 
+    script(async src="https://www.googletagmanager.com/gtag/js?id=G-LWXRWR7HHL")
     script.
         let B= document.body; //IE 'quirks'
         let D= document.documentElement; //IE with doctype
         D = (D.clientHeight)? D: B;
+
+        //- gtag       
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-LWXRWR7HHL');
 
         window.smoothScroll = (targetId='') => {
             const el = document.getElementById(targetId);
